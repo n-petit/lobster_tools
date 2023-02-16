@@ -6,7 +6,7 @@ import pytest
 
 from click.testing import CliRunner
 
-from lobster_tools import lobster_tools
+from lobster_tools import base_classes
 from lobster_tools import cli
 
 
