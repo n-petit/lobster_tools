@@ -371,3 +371,9 @@ class Lobster:
     def add_ticker_column(self) -> None:
         self.book._add_ticker_column(self.data.ticker)
         self.messages._add_ticker_column(self.data.ticker)
+
+
+def myFunc(x):
+    return x+1
+
+ALMOST_PI = 3.14
