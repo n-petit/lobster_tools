@@ -78,7 +78,7 @@ class Direction(Enum):
 ############################
 @dataclass
 class Data:
-    directory_path: str = "../data"
+    directory_path: str = "../data/raw"
     ticker: str = "AIG"
     date_range: Union[str, Tuple[str, str]] = None
     levels: int = None
