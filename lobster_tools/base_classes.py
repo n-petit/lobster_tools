@@ -76,9 +76,10 @@ class Direction(Enum):
 
 ############################
 ############################
+DIRECTORY_PATH = "../data/raw"
 @dataclass
 class Data:
-    directory_path: str = "../data/raw"
+    directory_path: str = DIRECTORY_PATH
     ticker: str = "AIG"
     date_range: Union[str, Tuple[str, str]] = None
     levels: int = None
@@ -219,6 +220,8 @@ class Messages(DatetimeDataFrame):
         plt.show()
 
 # book class
+
+
 class Book(DatetimeDataFrame):
     "Limit order book data: book data class."
 
@@ -338,7 +341,6 @@ class Lobster:
         df = pd.concat(dfs)
         df.set_index(self.messages.index, inplace=True, drop=True)
 
-
         price_cols = df.columns.str.contains("price")
         df.loc[:, price_cols] = df.loc[:, price_cols].apply(
             lambda x: x / 10_000)
@@ -373,7 +375,7 @@ class Lobster:
         self.messages._add_ticker_column(self.data.ticker)
 
 
-def myFunc(x):
-    return x+1
+# TODO write a load_lobster file
+# def load_lobster()
 
-ALMOST_PI = 3.14
+# set default attribute of a class
